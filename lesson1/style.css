@@ -1,0 +1,35 @@
+
+body {
+
+}
+
+.catalog_item {
+    width: 30%;
+    transition: width .2s;
+}
+
+.catalog_items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog_item {
+    display: block;
+    border: 1px solid #b5e9a7;
+    border-radius: 3px;
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 5px 5px 20px 5px;
+    text-decoration: none;
+    color: #474747;
+
+}
+
+
+
+.cart_item {
+    display: block;
+    width: 30%;
+    transition: width .2s;
+}
