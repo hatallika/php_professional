@@ -3,16 +3,25 @@
 use app\engine\Autoload;
 use app\engine\Db;
 use app\models\{Products, Users, Feedback, Cart};
+use app\models\ex\{Rectangle, Circle, Triangle};
+
 include "../engine/Autoload.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
+$product = new Products();
+$user = new Users();
+$feedback = new Feedback();
+$cart = new Cart();
 
-$db = new Db();
-$product = new Products($db);
-$user = new Users($db);
-$feedback = new Feedback($db);
-$cart = new Cart($db);
+$rectangle = new Rectangle(1,2);
+echo $rectangle->view();
+
+$circle = new Circle(5);
+echo $circle->view();
+
+$triangle = new Triangle(1,2,2);
+echo $triangle->view();
 
 echo $product->getOne(2);
 echo $product->getAll();
@@ -26,4 +35,4 @@ echo $feedback->getAll();
 echo $cart->getOne(2);
 echo $cart->getAll();
 
-var_dump($product);
+//var_dump($product);

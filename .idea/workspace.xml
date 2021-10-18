@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/ex1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/ex2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/ex3_5.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/img/coffee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/img/pizza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/img/tea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson1/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson2/db/gb1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,14 +34,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson1/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson2" />
       <recent name="C:\OpenServer\domains\gb\lesson1\img" />
       <recent name="C:\OpenServer\domains\gb\lesson1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson2\db" />
+      <recent name="C:\OpenServer\domains\gb\lesson2" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -64,7 +59,9 @@
       <updated>1634142240030</updated>
       <workItem from="1634142241628" duration="217000" />
       <workItem from="1634145679924" duration="11766000" />
-      <workItem from="1634232484576" duration="14261000" />
+      <workItem from="1634232484576" duration="14707000" />
+      <workItem from="1634295050622" duration="25000" />
+      <workItem from="1634505186142" duration="883000" />
     </task>
     <servers />
   </component>

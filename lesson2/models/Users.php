@@ -9,6 +9,8 @@ class Users extends Model
     public $pass;
     public $hash;
 
-    protected $tableName = 'users';
+    public function getTableName(){
+        return 'users';
+    }
 
 }

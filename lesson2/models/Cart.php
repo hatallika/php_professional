@@ -11,5 +11,7 @@ class Cart extends Model
     public $fixed_price;
 
 
-    protected $tableName = 'cart';
+    public function getTableName(){
+        return 'cart';
+    }
 }

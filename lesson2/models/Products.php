@@ -11,6 +11,8 @@ class Products extends Model
     public $image;
     public $likes;
 
-    protected $tableName = 'products';
+    public function getTableName(){
+        return 'products';
+    }
 
 }

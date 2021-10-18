@@ -2,26 +2,31 @@
 
 namespace app\models;
 use app\engine\Db;
+use app\interfaces\IModel;
 
-abstract class Model
+abstract class Model implements IModel
 {
-    protected $db;
-    protected $tableName = '';
+    abstract function getTableName();
 
+    public function __set($name, $value){
+        $this->$name = $value;
+    }
 
-    public function __construct(Db $db)
-    {
-        $this->db = $db;
+    public function __get($name){
+        return $this->$name;
     }
 
     public function getOne($id){
-        $sql = "SELECT * FROM {$this->tableName} WHERE id = {$id}";
-        return $this->db->queryOne($sql);
+        $tablename = $this->getTableName();
+        $sql = "SELECT * FROM {$tablename} WHERE id = {$id}";
+        return (new Db())->queryOne($sql); //
+
     }
 
     public function getAll(){
-        $sql = "SELECT * FROM {$this->tableName}";
-        return $this->db->queryAll($sql);
+        $tablename = $this->getTableName();
+        $sql = "SELECT * FROM {$tablename}";
+        return (new Db())->queryAll($sql);
     }
 
 }

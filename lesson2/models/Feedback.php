@@ -9,5 +9,7 @@ class Feedback extends Model
     public $feedback;
     public $product_id;
 
-    protected $tableName = 'feedback';
+    public function getTableName(){
+        return 'feedback';
+    }
 }
