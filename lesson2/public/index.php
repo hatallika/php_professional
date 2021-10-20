@@ -1,5 +1,5 @@
 <?php
-
+define("DOCUMENT_ROOT", dirname(__DIR__));
 use app\engine\Autoload;
 use app\engine\Db;
 use app\models\{Products, Users, Feedback, Cart};

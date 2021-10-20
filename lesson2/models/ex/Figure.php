@@ -7,9 +7,5 @@ abstract class Figure
     abstract public function getArea();
     abstract public function getPerimeter();
     abstract public function viewInputData();
-    public function view(){
-    return ("{$this->viewInputData()}<br>
-        Площадь {$this->name}а: {$this->getArea()}<br>" .
-        (($this->name == 'круг')?"Длинна окружности": "Периметр {$this->name}а") .": {$this->getPerimeter()}<br>");
-    }
+    abstract public function view();
 }

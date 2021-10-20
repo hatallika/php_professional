@@ -29,4 +29,9 @@ class Triangle extends Figure
     {
         return "Дан {$this->name}: сторона a = {$this->sideA}, сторона b = {$this->sideB}, сторона с = {$this->sideC}";
     }
+    public function view(){
+        return ("{$this->viewInputData()}<br>
+        Площадь {$this->name}а: {$this->getArea()}<br>
+            Периметр {$this->name}а : {$this->getPerimeter()}<br>");
+    }
 }

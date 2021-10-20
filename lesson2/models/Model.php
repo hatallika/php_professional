@@ -1,11 +1,17 @@
 <?php
 
 namespace app\models;
-use app\engine\Db;
+use app\engine\Db as Db;
 use app\interfaces\IModel;
 
 abstract class Model implements IModel
 {
+    public $db;
+
+    public function __construct()
+    {
+        $this->db = new Db;
+    }
     abstract function getTableName();
 
     public function __set($name, $value){
@@ -17,16 +23,17 @@ abstract class Model implements IModel
     }
 
     public function getOne($id){
+        var_dump($this->db);
         $tablename = $this->getTableName();
         $sql = "SELECT * FROM {$tablename} WHERE id = {$id}";
-        return (new Db())->queryOne($sql); //
+        return ($this->db)->queryOne($sql); //
 
     }
 
     public function getAll(){
         $tablename = $this->getTableName();
         $sql = "SELECT * FROM {$tablename}";
-        return (new Db())->queryAll($sql);
+        return ($this->db)->queryAll($sql);
     }
 
 }
