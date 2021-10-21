@@ -1,10 +1,11 @@
 <?php
-define("DOCUMENT_ROOT", dirname(__DIR__));
+
 use app\engine\Autoload;
 use app\engine\Db;
 use app\models\{Products, Users, Feedback, Cart};
 use app\models\ex\{Rectangle, Circle, Triangle};
 
+include "../config/config.php";
 include "../engine/Autoload.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
