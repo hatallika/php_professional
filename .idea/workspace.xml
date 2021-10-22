@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson2/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/db/gb1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/engine/Autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/engine/Db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/interfaces/IModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Feedback.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Images.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/Users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/ex/Circle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/ex/Figure.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/ex/Rectangle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/models/ex/Triangle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/traits/TSingleton.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/engine/Autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/engine/Autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/interfaces/IModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/interfaces/IModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3/engine/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/engine/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +68,8 @@
       <workItem from="1634505186142" duration="883000" />
       <workItem from="1634561182573" duration="3638000" />
       <workItem from="1634732783184" duration="11951000" />
-      <workItem from="1634807666000" duration="31440000" />
+      <workItem from="1634807666000" duration="31508000" />
+      <workItem from="1634888482600" duration="10738000" />
     </task>
     <servers />
   </component>

@@ -1,41 +1,34 @@
 <?php
 
 use app\engine\Autoload;
-use app\engine\Db;
 use app\models\{Products, Users, Feedback, Cart};
-use app\models\ex\{Rectangle, Circle, Triangle};
+
 
 include "../config/config.php";
 include "../engine/Autoload.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
-
-/*$product = new Products("Пицца","Описание",125,"pizza.jpg");
+//INSERT, DELETE
+$product = new Products("Чай","Описание",33,"tea.jpg");
 $product->insert();
-$product->delete();*/
-
-$product = new Products();
-var_dump($product->getOne(18));
+$product->insert();
 $product->delete();
 
+//SELECT, DELETE
+$product2 = new Products();
+var_dump($product2->getOne(3));
+($product2->getOne(3))->delete(); // возвращает экземпляр Product и удаляет по его данным из БД
+
+//UPDATE
+$product3 = new Products("Пицца!","Вкусная",125,"pizza.jpg");
+$product3->update(4);
 
 
-var_dump($product);
-var_dump(get_class_methods($product));
 
+//var_dump($product);
+//var_dump(get_class_methods($product));
 
+//$feedback = new Feedback();
 //var_dump($feedback->getOne(2));
 //var_dump($feedback->getAll());
-
-
-
-/*$rectangle = new Rectangle(1,2);
-echo $rectangle->view();
-
-$circle = new Circle(5);
-echo $circle->view();
-
-$triangle = new Triangle(1,2,2);
-echo $triangle->view();
-*/

@@ -52,21 +52,33 @@ abstract class Model implements IModel
         //INSERT INTO products(name, description, price, image) VALUES (:name, :description, :price, :image)
 
         //params = ['name'=> 'Пицца', ...]
-        //INSERT INTO users (login, pass, hash) VALUES (:login, :pass, :hash)
-        //params = ['login'=> 'user', ...]
 
         //Db::getInstance()->execute($sql,$params);
         //$this->id = DB::getInstance()->lastInsertId();
         //return $this для дальнейших цепочек в index
     }
 
-    public function update(){}
+    public function update($id){
+        $tablename = $this->getTableName();
+        $sql = "UPDATE $tablename SET ";
+        //UPDATE `products` SET `name`=[:name],`description`=[:description],... WHERE id = :id
+        foreach ($this as $key => $value) {
+            if ($key=='id'||$key=='likes'){continue;}
+            $params[$key] = $value;
+            $sql .= "`$key`=:$key, ";
+        }
+        $params['id']=$id;
+        $sql = substr($sql,0,-2) . " WHERE id = :id";
+
+        return Db::getInstance()->execute($sql,$params); // пока не поняла что именно обновляем ->update(id) или ->update([name=>'...', ...])
+        //return $this;
+    }
 
     public function delete(){
         $tablename = $this->getTableName();
-        $params['id'] = $this->id;
+        $id = $this->id;
         $sql = "DELETE FROM $tablename WHERE id = :id";
-        Db::getInstance()->execute($sql,$params);
+        Db::getInstance()->execute($sql,['id'=> $id]);
     }
 
 }

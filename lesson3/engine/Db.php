@@ -58,16 +58,16 @@ class Db
         return $STH;
     }
 
+    //WHERE id = 1
+    public function queryOne($sql, $params=[]){
+        return $this->query($sql, $params)->fetch(); // в getConnection указали в каком виде вернуть данные - PDO::FETCH_ASSOC
+    }
+
     public function queryOneObject($sql, $params, $class){
 
         $STH = $this->query($sql,$params);
         $STH->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $class); //$class = app\models\Product
         return $STH->fetch();
-    }
-
-    //WHERE id = 1
-    public function queryOne($sql, $params=[]){
-        return $this->query($sql, $params)->fetch(); // в getConnection указали в каком виде вернуть данные - PDO::FETCH_ASSOC
     }
 
     //SELECT all
