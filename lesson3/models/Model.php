@@ -38,7 +38,7 @@ abstract class Model implements IModel
 
         $tablename = $this->getTableName();
         foreach ($this as $key => $value) {
-            if ($key=='id'||$key=='likes'){continue;}
+            if ($key=='id'){continue;}
             //var_dump($key . "=>" . $value);
             $params[$key] = $value;
         }
@@ -58,19 +58,20 @@ abstract class Model implements IModel
         //return $this для дальнейших цепочек в index
     }
 
-    public function update($id){
+    public function update(){
+
         $tablename = $this->getTableName();
-        $sql = "UPDATE $tablename SET ";
+        $sql = "";
         //UPDATE `products` SET `name`=[:name],`description`=[:description],... WHERE id = :id
         foreach ($this as $key => $value) {
-            if ($key=='id'||$key=='likes'){continue;}
+            if ($key=='id'){continue;}
             $params[$key] = $value;
             $sql .= "`$key`=:$key, ";
         }
-        $params['id']=$id;
-        $sql = substr($sql,0,-2) . " WHERE id = :id";
+        $params['id']=$this->id;
+        $sql = "UPDATE $tablename SET " . substr($sql,0,-2) . " WHERE id = :id";
 
-        return Db::getInstance()->execute($sql,$params); // пока не поняла что именно обновляем ->update(id) или ->update([name=>'...', ...])
+        return Db::getInstance()->execute($sql,$params);
         //return $this;
     }
 

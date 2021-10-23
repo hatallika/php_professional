@@ -9,20 +9,22 @@ include "../engine/Autoload.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
-//INSERT, DELETE
-$product = new Products("Чай","Описание",33,"tea.jpg");
+
+/*$product = new Products("Чай", "Описание", 33, "tea.jpg", 0);
 $product->insert();
 $product->insert();
 $product->delete();
 
-//SELECT, DELETE
-$product2 = new Products();
+*/
+/*$product2 = new Products();
 var_dump($product2->getOne(3));
-($product2->getOne(3))->delete(); // возвращает экземпляр Product и удаляет по его данным из БД
+($product2->getOne(3))->delete(); // возвращает экземпляр Product и удаляет по его данным из БД*/
 
 //UPDATE
-$product3 = new Products("Пицца!","Вкусная",125,"pizza.jpg");
-$product3->update(4);
+$product3 = new Products("Пицца!","Вкусная",125,"pizza.jpg", 0);
+$product3->insert();
+$product3->name = "Вкусная пицца";
+$product3->update();
 
 
 

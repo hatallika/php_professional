@@ -33,8 +33,10 @@ class Db
 
     public function lastInsertID(){
         //TODO вернуть id - получить доступ к conection и вернуть lastInsertID PDO
-        $obj = $this->connection;
-        return $obj->lastInsertID();
+        //$obj = $this->connection;
+        //return $obj->lastInsertID();
+        return $this->connection->lastInsertID();
+
 
     }
 
