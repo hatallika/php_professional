@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/engine/Autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/engine/Autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/models/ex/Circle.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/models/ex/Circle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/models/ex/Figure.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/models/ex/Figure.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/models/ex/Rectangle.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/models/ex/Rectangle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/models/ex/Triangle.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/models/ex/Triangle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3/engine/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/engine/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +36,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson3/models" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson3\models" />
+      <recent name="C:\OpenServer\domains\gb\lesson3" />
       <recent name="C:\OpenServer\domains\gb\lesson2" />
       <recent name="C:\OpenServer\domains\gb\lesson1\img" />
       <recent name="C:\OpenServer\domains\gb\lesson1" />
@@ -69,7 +67,11 @@
       <workItem from="1634295050622" duration="25000" />
       <workItem from="1634505186142" duration="883000" />
       <workItem from="1634561182573" duration="3638000" />
-      <workItem from="1634732783184" duration="802000" />
+      <workItem from="1634732783184" duration="11951000" />
+      <workItem from="1634807666000" duration="31508000" />
+      <workItem from="1634888482600" duration="11102000" />
+      <workItem from="1634927555295" duration="481000" />
+      <workItem from="1634992833576" duration="862000" />
     </task>
     <servers />
   </component>
