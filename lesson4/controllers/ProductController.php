@@ -3,21 +3,13 @@
 namespace app\controllers;
 use app\models\Products;
 
-class ProductController
+class ProductController extends Controller
 {
     private $action;
-    private $defaultAction = 'index';
+    protected $defaultAction = 'index';
     private $layout ='main';
     private $useLayout = true; //использовать ли шаблон по умолчанию.
 
-    public function runAction($action)
-    {
-        $this->action = $action ?? $this->defaultAction; //if null take catalog
-        $method = "action" . ucfirst($this->action);
-        if(method_exists($this, $method)){
-            $this->$method();
-        };
-    }
 
     public function actionIndex()
     {
@@ -27,9 +19,19 @@ class ProductController
 
     public function actionCatalog()
     {
-        $catalog = Products::getAll();
+        $max_page = floor(Products::getCount() / PER_PAGE); // ограничить вывод страниц, когда товары закончатся.
+        //$catalog = Products::getAll();
+        $page = $_GET['page'] ?? 0;
+        if ($page > $max_page){
+            $page = $max_page;
+        }
+
+        $catalog = Products::getLimit($page*PER_PAGE); //LIMIT 0,2////LIMIT 3,2
+
+
         echo $this->render('catalog', [
-            'catalog'=> $catalog
+            'catalog'=> $catalog,
+            'page' => ++$page
         ]);
     }
 
@@ -49,24 +51,5 @@ class ProductController
         //админ добавляет новый продукт в каталог
     }
 
-    public function render($template, $params=[])
-    {
-        if($this->useLayout){
-            return $this->renderTemplate('layouts/'.$this->layout, [
-                'menu' => $this->renderTemplate('menu', $params),
-                'content' => $this->renderTemplate($template, $params) //либо index, либо catalog, либо card
-            ]);
-        } else {
-            return $this->renderTemplate($template, $params);
-        }
-    }
 
-    public function renderTemplate($template, $params=[])
-    {//layout||catalog
-        ob_start();
-        extract($params);
-        $templatePath = VIEWS_DIR . $template . ".php";
-        include $templatePath;
-        return  ob_get_clean();
-    }
 }

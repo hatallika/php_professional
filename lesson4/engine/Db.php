@@ -1,6 +1,7 @@
 <?php
 
 namespace app\engine;
+use app\models\Products;
 use app\traits\TSingleton;
 use \PDO;
 class Db
@@ -56,6 +57,15 @@ class Db
         $STH->execute($params); //запускает подготовленный запрос на исполнение
         return $STH;
     }
+    public function queryLimit($sql, $limit)
+    {
+        $STH = $this->getConnection()->prepare($sql);
+        $STH->bindValue(1, $limit, PDO::PARAM_INT);
+        $STH->bindValue(2, PER_PAGE, PDO::PARAM_INT);
+        $STH->execute(); //запускает подготовленный запрос на исполнение
+
+        return $STH;
+    }
 
     //WHERE id = 1
     public function queryOne($sql, $params=[]){
@@ -72,6 +82,7 @@ class Db
     public function queryAll($sql, $params=[]){
         return $this->query($sql, $params)->fetchAll(); //Возвращает массив, содержащий все строки результирующего набора
     }
+
 
     //INSERT, UPDATE, DELETE - не нужны данные
     public function execute($sql, $params=[]){

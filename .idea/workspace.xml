@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson4/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/controllers/CartController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/db/gb1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/engine/Autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/engine/Db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/interfaces/IModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/DBModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Feedback.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Images.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/Users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Circle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Figure.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Rectangle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Triangle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/public/images/apple.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/public/images/coffee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/public/images/pizza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/public/images/tea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/traits/TSingleton.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/views/card.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/views/cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/views/catalog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/views/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/views/layouts/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson4/views/menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/engine/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/engine/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/DBModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/DBModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +80,7 @@
       <workItem from="1634807666000" duration="31508000" />
       <workItem from="1634888482600" duration="11102000" />
       <workItem from="1634927555295" duration="481000" />
-      <workItem from="1634992833576" duration="46423000" />
+      <workItem from="1634992833576" duration="57476000" />
     </task>
     <servers />
   </component>

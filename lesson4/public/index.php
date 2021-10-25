@@ -9,7 +9,6 @@ include "../engine/Autoload.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
-// $controllerName = $_GET['c'] ?: 'product';
 $controllerName = $_GET['c'] ?? 'product';
 $actionName = $_GET['a']; //определение по умолчанию в другом месте
 $controllerClass = CONTROLLER_NAMESPACE .ucfirst($controllerName) . "Controller";
@@ -17,6 +16,8 @@ $controllerClass = CONTROLLER_NAMESPACE .ucfirst($controllerName) . "Controller"
 if(class_exists($controllerClass)){
     $controller = new $controllerClass;
     $controller->runAction($actionName);
+
+
 } else {
     Die("404");
 }

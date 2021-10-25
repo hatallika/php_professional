@@ -30,11 +30,9 @@ abstract class DBModel extends Model
 
         //INSERT INTO products(name, description, price, image) VALUES (:name, :description, :price, :image)
         //params = ['name'=> 'Пицца', ...]
-
     }
 
     public function update(){
-
         $tablename = static::getTableName();
         $sql = "";
 
@@ -73,5 +71,20 @@ abstract class DBModel extends Model
         $sql = "SELECT * FROM {$tablename}";
         return Db::getInstance()->queryAll($sql);
     }
+
+    public static function getLimit($limit){
+
+        $tablename = static::getTableName();
+        $sql = "SELECT * FROM {$tablename} LIMIT ?,  ?";
+        return Db::getInstance()->queryLimit($sql, $limit);
+    }
+
+    public static function getCount(){
+        $tablename = static::getTableName();
+        $sql = "SELECT * FROM {$tablename}";
+        return Db::getInstance()->execute($sql);
+    }
+
+
 
 }
