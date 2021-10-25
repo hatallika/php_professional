@@ -2,10 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lesson4/config/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/controllers/CartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/db/gb1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/engine/Autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/engine/Db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/interfaces/IModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/DBModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Feedback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Images.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Orders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/Users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Circle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Figure.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Rectangle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/models/ex/Triangle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/public/images/apple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/public/images/coffee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/public/images/pizza.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/public/images/tea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/traits/TSingleton.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/views/card.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/views/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/views/catalog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/views/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/views/layouts/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson4/views/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson3/engine/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/engine/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson3/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson3/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +54,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="gb4" id="8f67da9a-3359-4be5-af96-26531c24171b" name="gb4" />
+    </servers>
+  </component>
   <component name="ProjectId" id="1zSX0XggVeA3EpJsWgYOfMfa6HD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,17 +69,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson3/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson4/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\gb\lesson3\models" />
-      <recent name="C:\OpenServer\domains\gb\lesson3" />
-      <recent name="C:\OpenServer\domains\gb\lesson2" />
-      <recent name="C:\OpenServer\domains\gb\lesson1\img" />
-      <recent name="C:\OpenServer\domains\gb\lesson1" />
+      <recent name="C:\OpenServer\domains\gb\lesson4\public\images" />
+      <recent name="C:\OpenServer\domains\gb\lesson4\views" />
+      <recent name="C:\OpenServer\domains\gb\lesson4\controllers" />
+      <recent name="C:\OpenServer\domains\gb\lesson4" />
+      <recent name="C:\OpenServer\domains\gb" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\gb\lesson2\db" />
@@ -71,7 +104,7 @@
       <workItem from="1634807666000" duration="31508000" />
       <workItem from="1634888482600" duration="11102000" />
       <workItem from="1634927555295" duration="481000" />
-      <workItem from="1634992833576" duration="862000" />
+      <workItem from="1634992833576" duration="46423000" />
     </task>
     <servers />
   </component>
