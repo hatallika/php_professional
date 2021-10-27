@@ -3,7 +3,7 @@
 namespace app\models;
 
 //Галлерея
-class Images extends Model
+class Images extends DBModel
 {
     public $id;
     protected $name;

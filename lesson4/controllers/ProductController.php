@@ -5,11 +5,6 @@ use app\models\Products;
 
 class ProductController extends Controller
 {
-    private $action;
-    protected $defaultAction = 'index';
-    private $layout ='main';
-    private $useLayout = true; //использовать ли шаблон по умолчанию.
-
 
     public function actionIndex()
     {

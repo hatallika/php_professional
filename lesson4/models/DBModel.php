@@ -39,7 +39,7 @@ abstract class DBModel extends Model
         //UPDATE `products` SET `name`=[:name],`description`=[:description],... WHERE id = :id
         foreach ($this->props as $key => $value) {
 
-            if ($key=='id'|| !($value)){continue;}
+            if (!($value)){continue;}
             $params[$key] = $this->$key;
             $sql .= "`$key`=:$key, ";
         }
