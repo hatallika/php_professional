@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson4/models/DBModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/DBModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/Feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Feedback.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson4/models/Images.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/models/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/models/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,22 +47,34 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson4/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson4" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson4" />
       <recent name="C:\OpenServer\domains\gb\lesson4\public\images" />
       <recent name="C:\OpenServer\domains\gb\lesson4\views" />
       <recent name="C:\OpenServer\domains\gb\lesson4\controllers" />
-      <recent name="C:\OpenServer\domains\gb\lesson4" />
       <recent name="C:\OpenServer\domains\gb" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson4\models" />
       <recent name="C:\OpenServer\domains\gb\lesson2\db" />
       <recent name="C:\OpenServer\domains\gb\lesson2" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="models" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/lesson4/models" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.models" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,7 +95,8 @@
       <workItem from="1634888482600" duration="11102000" />
       <workItem from="1634927555295" duration="481000" />
       <workItem from="1634992833576" duration="58678000" />
-      <workItem from="1635351474989" duration="380000" />
+      <workItem from="1635351474989" duration="5882000" />
+      <workItem from="1635359136641" duration="756000" />
     </task>
     <servers />
   </component>
