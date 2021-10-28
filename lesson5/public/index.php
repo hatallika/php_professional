@@ -1,6 +1,7 @@
 <?php
+//session_start();
 
-use app\engine\Autoload;
+use app\engine\{Autoload, Render, TwigRender};
 use app\models\{Products, Users, Feedback, Cart, Images};
 
 
@@ -8,13 +9,15 @@ include "../config/config.php";
 include "../engine/Autoload.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
+require_once '../vendor/autoload.php';
 
 $controllerName = $_GET['c'] ?? 'product';
 $actionName = $_GET['a']; //определение по умолчанию в другом месте
 $controllerClass = CONTROLLER_NAMESPACE .ucfirst($controllerName) . "Controller";
 
 if(class_exists($controllerClass)){
-    $controller = new $controllerClass;
+    //$controller = new $controllerClass(new Render());
+    $controller = new $controllerClass(new TwigRender());
     $controller->runAction($actionName);
 
 

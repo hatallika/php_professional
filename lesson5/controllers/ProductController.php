@@ -24,7 +24,7 @@ class ProductController extends Controller
         $catalog = Products::getLimit($page*PER_PAGE); //LIMIT 0,2////LIMIT 3,2
 
 
-        echo $this->render('catalog', [
+        echo $this->render('catalog/index', [
             'catalog'=> $catalog,
             'page' => ++$page
         ]);
@@ -36,15 +36,15 @@ class ProductController extends Controller
         $id = $_GET['id'];
         $product = Products::getOne($id);
 
-        echo $this->render('card',[
+        echo $this->render('catalog/card',[
             'product'=> $product
         ]);
+
     }
 
     public function actionAdd()
     {
         //админ добавляет новый продукт в каталог
     }
-
 
 }
