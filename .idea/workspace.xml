@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson5/engine/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson5/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson5/templates/auth.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4.zip" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/engine5.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/engine/TwigRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/engine/TwigRender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/models/DBModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/models/DBModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/models/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/models/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/templates/catalog/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/templates/catalog/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/templates/layouts/main.twig" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/templates/layouts/main.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/templates/menu.twig" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/templates/menu.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/views/cart.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/views/catalog/card.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/views/catalog/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/views/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/views/layouts/main.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson5/views/menu.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +102,7 @@
       <workItem from="1635412350704" duration="284000" />
       <workItem from="1635454326551" duration="1478000" />
       <workItem from="1635671883113" duration="60000" />
-      <workItem from="1635696152402" duration="289000" />
+      <workItem from="1635696152402" duration="1133000" />
     </task>
     <servers />
   </component>
