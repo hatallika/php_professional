@@ -2,7 +2,7 @@
 
     {% for item in catalog %}
 <div>
-    <h3><a href="/?c=product&a=card&id={{ item.id }}">{{ item.name }}</a></h3>
+    <h3><a href="/product/card/?id={{ item.id }}">{{ item.name }}</a></h3>
     <img src="/images/{{ item.image }}" alt="{{ item.name }}" width="150">
     <p>price: {{ item.price }}</p>
     <button>Купить</button>
@@ -11,4 +11,4 @@
         Нет товаров
     {% endfor %}
 
-<a href="/?c=product&a=catalog&page={{ page }}">Еще</a>
+<a href="/product/catalog/?page={{ page }}">Еще</a>

@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="" />
+    <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lesson5/engine/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson5/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson5/templates/auth.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4.zip" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/engine5.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/engine/TwigRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/engine/TwigRender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/models/DBModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/models/DBModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/models/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/models/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/templates/catalog/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/templates/catalog/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/templates/layouts/main.twig" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/templates/layouts/main.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/templates/menu.twig" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/templates/menu.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/views/cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/views/catalog/card.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/views/catalog/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/views/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/views/layouts/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/views/menu.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/lesson5/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -26,6 +52,14 @@
       <server host="gb4" id="8f67da9a-3359-4be5-af96-26531c24171b" name="gb4" />
     </servers>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/lesson5/vendor/composer" />
+      <path value="$PROJECT_DIR$/lesson5/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/lesson5/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/lesson5/vendor/symfony/polyfill-ctype" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1zSX0XggVeA3EpJsWgYOfMfa6HD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,19 +70,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson5" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson5" />
       <recent name="C:\OpenServer\domains\gb" />
       <recent name="C:\OpenServer\domains\gb\lesson4" />
       <recent name="C:\OpenServer\domains\gb\lesson4\public\images" />
       <recent name="C:\OpenServer\domains\gb\lesson4\views" />
-      <recent name="C:\OpenServer\domains\gb\lesson4\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\gb\lesson5" />
       <recent name="C:\OpenServer\domains\gb\lesson4\models" />
       <recent name="C:\OpenServer\domains\gb\lesson2\db" />
       <recent name="C:\OpenServer\domains\gb\lesson2" />
@@ -87,6 +122,9 @@
       <workItem from="1635351474989" duration="5882000" />
       <workItem from="1635359136641" duration="756000" />
       <workItem from="1635412350704" duration="284000" />
+      <workItem from="1635454326551" duration="1478000" />
+      <workItem from="1635671883113" duration="60000" />
+      <workItem from="1635696152402" duration="289000" />
     </task>
     <servers />
   </component>

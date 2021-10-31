@@ -7,12 +7,13 @@ use Twig\Environment;
 
 class TwigRender implements IRenderer
 {
-    public $twig;
+    protected $twig;
 
     public function __construct()
     {
         $loader = new \Twig\Loader\FilesystemLoader('../templates');
         $this->twig = new \Twig\Environment($loader);
+
     }
 
     public function renderTemplate($template, $params=[])

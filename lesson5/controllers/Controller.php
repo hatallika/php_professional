@@ -2,8 +2,11 @@
 
 namespace app\controllers;
 
+use app\engine\Auth;
+use app\engine\Message;
 use app\engine\Render;
 use app\interfaces\IRenderer;
+use app\models\Users;
 
 abstract class Controller
 {
@@ -11,6 +14,7 @@ abstract class Controller
     protected $defaultAction = 'index';
     private $layout ='main';
     private $useLayout = true; //использовать ли шаблон по умолчанию.
+
 
     protected $render;
 
@@ -31,9 +35,14 @@ abstract class Controller
     public function render($template, $params=[])
     {
         if($this->useLayout){
+
             return $this->renderTemplate('layouts/'.$this->layout, [
                 'menu' => $this->renderTemplate('menu', $params),
-                'content' => $this->renderTemplate($template, $params) //либо index, либо catalog, либо card
+                'content' => $this->renderTemplate($template, $params), //либо index, либо catalog, либо card
+                'auth' => $this->renderTemplate('auth', [
+                    'auth' => Users::isAuth(),
+                    'username'=> Users::get_user(),
+                    'message_auth' =>Message::getMessageAuth()])
             ]);
         } else {
             return $this->renderTemplate($template, $params);
