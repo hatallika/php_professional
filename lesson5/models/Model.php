@@ -17,4 +17,9 @@ abstract class Model implements IModel
         return $this->$name;
     }
 
+    public function __isset($name) {
+
+        return isset($this->$name);
+    }
+
 }

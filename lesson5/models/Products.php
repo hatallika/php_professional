@@ -5,6 +5,7 @@ namespace app\models;
 
 class Products extends DBModel
 {
+
     protected $id;
     protected $name;
     protected $description;
