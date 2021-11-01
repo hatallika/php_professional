@@ -2,13 +2,11 @@
 
     {% for item in catalog %}
 <div>
-
         <input type="text"  name="id" value="{{ item.id }}" hidden>
         <h3><a href="/product/card/?id={{ item.id }}">{{ item.name }}</a></h3>
         <img src="/images/{{ item.image }}" alt="{{ item.name }}" width="150">
         <p>price: {{ item.price }}</p>
         <button data-id="{{ item.id }}" class="buy">Купить</button>
-
 </div>
     {% else %}
         Нет товаров

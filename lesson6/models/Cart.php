@@ -32,9 +32,6 @@ class Cart extends DBModel
                         FROM products p JOIN cart c 
                         WHERE c.product_id = p.id AND c.session_id = :session_id";
 
-        /*$sql = "SELECT cart.id cart_id, product_id prod_id, products.name, products.description, products.price,
-        products.image, products.quantity
-        FROM cart, products WHERE session_id = '{$session_id}' AND cart.product_id = products.id";*/
 
         return Db::getInstance()->queryAll($sql,['session_id' => $session_id]);
     }
@@ -46,7 +43,7 @@ class Cart extends DBModel
         return Db::getInstance()->queryOneObject($sql, ['session_id' => $session_id, 'id' => $id], static::class);
     }
 
-   /* public static function deleteCartProduct($session_id,$id){
+    /*public static function deleteCartProduct($session_id,$id){
         $tablename = static::getTableName();
         $sql = "DELETE FROM $tablename WHERE session_id = :session_id AND product_id = :id ";
         return Db::getInstance()->execute($sql,['session_id' => $session_id, 'id' => $id]);
@@ -57,7 +54,6 @@ class Cart extends DBModel
         $sql = "SELECT SUM(quantity) as count FROM $tablename WHERE session_id = :session_id";
         return Db::getInstance()->queryOne($sql,['session_id' => $session_id])['count'];
     }
-
 
     public static function getTableName(){
         return 'cart';

@@ -2,11 +2,14 @@
 
 {% for item in cart %}
     <div id="{{ item.cart_id }}">
-            <!--<input type="text"  name="id" value="{{ item.cart_id }}" hidden>-->
             <h3>{{ item.name }}</a></h3>
             <img src="/images/{{ item.image }}" alt="{{ item.name }}" width="120">
             <p>price: {{ item.price }}</p>
-            <p>Количество товара: {{ item.quantity }}</p>
+            Количество товара:
+                <button class="delqnt">-</button>
+                    <span id="qnt{{ item.cart_id }}">{{ item.quantity }}</span>
+                <button class="addqnt">+</button>
+            <br>
             <button class="del" data-id="{{ item.cart_id }}">Удалить</button>
     </div>
 {% else %}
@@ -32,4 +35,43 @@
             )();
         });
     });
+
+    let buttonAddQnt = document.querySelectorAll('.addqnt');
+    buttonAddQnt.forEach((elem) => {
+        elem.addEventListener('click', ()=>{
+            let id = elem.parentElement.getAttribute('id');
+            (
+                async () => {
+                    const response = await fetch('/cart/addqnt/?id=' + id);
+                    const answer = await response.json();
+
+                    document.getElementById('qnt'+id).innerText = answer.quantity;
+                    document.getElementById('count').innerText = answer.count;
+                }
+            )();
+        });
+    });
+
+    let buttonDelQnt = document.querySelectorAll('.delqnt');
+    buttonDelQnt.forEach((elem) => {
+        elem.addEventListener('click', ()=>{
+            let id = elem.parentElement.getAttribute('id');
+            (
+                async () => {
+                    const response = await fetch('/cart/delqnt/?id=' + id);
+                    const answer = await response.json();
+                    console.log(answer.quantity);
+                    if (answer.quantity == null){
+                        console.log('Hello');
+                        document.getElementById(id).remove();
+                    } else {
+                        document.getElementById('qnt'+id).innerText = answer.quantity;
+                    }
+                    document.getElementById('count').innerText = answer.count;
+                }
+            )();
+        });
+    });
+
+
 </script>

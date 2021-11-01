@@ -47,8 +47,8 @@ class CartController extends Controller
     public function actionDelete()
     {
         //$cart_id = $_POST['id'];
-        $cart_id = ($this->globalParams)->getParams()['id'];
-        $session_id = session_id();
+        $cart_id = $this->getGlobalParams()['id'];
+        $session_id = $this->getGlobalParams()['session_id'];
         if(Cart::getOne($cart_id)->session_id == $session_id) {
             Cart::getOne($cart_id)->delete();
         }
@@ -59,6 +59,43 @@ class CartController extends Controller
             'count' => Cart::countCartItems($session_id) //не универсальная, так как считает еще количество товара
         ];
 
+        echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function actionAddqnt(){
+        $cart_id = $this->getGlobalParams()['id'];
+        $session_id = $this->getGlobalParams()['session_id'];
+        $itemCart = Cart::getOne($cart_id);
+        $itemCart->quantity = $itemCart->quantity + 1;
+        $itemCart->save();
+        $response = [
+            'success' => 'ok',
+            'count' => Cart::countCartItems($session_id),
+            'quantity' => $itemCart->quantity
+        ];
+        echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function actionDelqnt(){
+        $cart_id = $this->getGlobalParams()['id'];
+        $session_id = $this->getGlobalParams()['session_id'];
+        $itemCart = Cart::getOne($cart_id);
+        if ($itemCart->quantity > 1){
+            $itemCart->quantity = $itemCart->quantity - 1;
+            $itemCart->save();
+            $quantity = $itemCart->quantity;
+        } else {
+            $itemCart->delete();
+            $quantity = null;
+        }
+
+        $response = [
+            'success' => 'ok',
+            'count' => Cart::countCartItems($session_id),
+            'quantity' => $quantity
+        ];
         echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         die();
     }
