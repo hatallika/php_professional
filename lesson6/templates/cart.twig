@@ -1,0 +1,35 @@
+<h2>Корзина</h2>
+
+{% for item in cart %}
+    <div id="{{ item.cart_id }}">
+            <!--<input type="text"  name="id" value="{{ item.cart_id }}" hidden>-->
+            <h3>{{ item.name }}</a></h3>
+            <img src="/images/{{ item.image }}" alt="{{ item.name }}" width="120">
+            <p>price: {{ item.price }}</p>
+            <p>Количество товара: {{ item.quantity }}</p>
+            <button class="del" data-id="{{ item.cart_id }}">Удалить</button>
+    </div>
+{% else %}
+    Нет товаров в корзине
+{% endfor %}
+<script>
+    let buttons = document.querySelectorAll('.del');
+    buttons.forEach((elem) => {
+        elem.addEventListener('click', ()=>{
+            let id = elem.getAttribute('data-id');
+            (
+                async () => {
+                    const response = await fetch('/cart/delete/?id=' + id);
+                    const answer = await response.json();
+                    document.getElementById(id).remove();
+                    if (answer.count){
+                        document.getElementById('count').innerText = answer.count;
+                    } else
+                    {
+                        document.getElementById('count').innerText = "пустая";
+                    }
+                }
+            )();
+        });
+    });
+</script>

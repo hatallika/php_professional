@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40e42f3d-23d0-4628-8d6a-9191a8ac1399" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,17 +66,6 @@
       <recent name="C:\OpenServer\domains\gb\lesson2" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="models" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/lesson4/models" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.models" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -102,7 +90,8 @@
       <workItem from="1635412350704" duration="284000" />
       <workItem from="1635454326551" duration="1478000" />
       <workItem from="1635671883113" duration="60000" />
-      <workItem from="1635696152402" duration="1133000" />
+      <workItem from="1635696152402" duration="1337000" />
+      <workItem from="1635772678535" duration="221000" />
     </task>
     <servers />
   </component>
