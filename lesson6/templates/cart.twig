@@ -67,7 +67,13 @@
                     } else {
                         document.getElementById('qnt'+id).innerText = answer.quantity;
                     }
-                    document.getElementById('count').innerText = answer.count;
+
+                    if (answer.count){
+                        document.getElementById('count').innerText = answer.count;
+                    } else
+                    {
+                        document.getElementById('count').innerText = "пустая";
+                    }
                 }
             )();
         });

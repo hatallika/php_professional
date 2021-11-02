@@ -49,8 +49,9 @@ class CartController extends Controller
         //$cart_id = $_POST['id'];
         $cart_id = $this->getGlobalParams()['id'];
         $session_id = $this->getGlobalParams()['session_id'];
-        if(Cart::getOne($cart_id)->session_id == $session_id) {
-            Cart::getOne($cart_id)->delete();
+        $cart = Cart::getOne($cart_id);
+        if($cart->session_id == $session_id) {
+            $cart->delete();
         }
         //Cart::deleteCartProduct($session_id,$product_id); //свой запрос для удаления
 
