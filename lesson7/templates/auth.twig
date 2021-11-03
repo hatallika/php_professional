@@ -1,0 +1,15 @@
+<div class="auth">
+    {% if auth %}
+    Добро пожаловать, {{ username }}! <a href="/auth/logout">[Выход]</a>
+    {% else %}
+    {{ message_auth }}
+        Пожалуйста, авторизуйтесь
+    <form method="post" action='/auth/login'>
+        <p><input type="text" name="login" value="admin"></p>
+        <p><input type="password" name="pass" value="123"></p>
+        Save? <input type="checkbox" name="save">
+        <p><input type="submit" name="ok"></p>
+    </form>
+    {% endif %}
+    <br>
+</div>
