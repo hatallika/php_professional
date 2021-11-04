@@ -1,9 +1,13 @@
 <?php
 
-namespace app\models;
+namespace app\models\entities;
 
 //Галлерея
-class Images extends DBModel
+use app\models\Entity;
+
+
+
+class Images extends Entity
 {
     protected $id;
     protected $name;
@@ -22,11 +26,6 @@ class Images extends DBModel
         $this->name = $name;
         $this->size = $size;
         $this->views = $views;
-    }
-
-
-    public static function getTableName(){
-        return 'images';
     }
 
 }

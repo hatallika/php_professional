@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\engine\Session;
+use app\models\repositories\UserRepository;
 use app\models\Users;
 
 class AuthController extends Controller
@@ -12,9 +13,9 @@ class AuthController extends Controller
          //form action='/auth/login/'
          $login = $this->getGlobalParams()['login']; //POST['login']
          $pass = $this->getGlobalParams()['pass']; // //POST['pass']
-         if (Users::auth($login,$pass)) {
+         if ((new UserRepository())->auth($login,$pass)) {
              if (isset($this->getGlobalParams()['save'])) {
-                 Users::updateHash();
+                 (new UserRepository())->updateHash();
              }
          } else {
              //$_SESSION['message']['login'] = 'Не верный логин и пароль';

@@ -1,7 +1,8 @@
 <?php
 
 namespace app\controllers;
-use app\models\Products;
+use app\models\entities\Products;
+use app\models\repositories\ProductRepository;
 
 class ProductController extends Controller
 {
@@ -14,14 +15,14 @@ class ProductController extends Controller
 
     public function actionCatalog()
     {
-        $max_page = floor(Products::getCount() / PER_PAGE); // ограничить вывод страниц, когда товары закончатся.
+        $max_page = floor((new ProductRepository())->getCount() / PER_PAGE); // ограничить вывод страниц, когда товары закончатся.
         //$catalog = Products::getAll();
         $page = $this->getGlobalParams()['page'] ?? 0;
         if ($page > $max_page){
             $page = $max_page;
         }
 
-        $catalog = Products::getLimit($page*PER_PAGE); //LIMIT 0,2////LIMIT 3,2// отображаем по 2=PER_PAGE
+        $catalog = (new ProductRepository())->getLimit($page*PER_PAGE); //LIMIT 0,2////LIMIT 3,2// отображаем по 2=PER_PAGE
 
 
         echo $this->render('catalog/index', [
@@ -34,7 +35,7 @@ class ProductController extends Controller
     public function actionCard()
     {
         $id = $this->getGlobalParams()['id'];
-        $product = Products::getOne($id);
+        $product = (new ProductRepository())->getOne($id);
 
         echo $this->render('catalog/card',[
             'product'=> $product

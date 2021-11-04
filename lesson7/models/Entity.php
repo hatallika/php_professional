@@ -1,15 +1,14 @@
 <?php
 
 namespace app\models;
-use app\interfaces\IModel;
 
-abstract class Model implements IModel
+
+abstract class Entity
 {
 
     public function __set($name, $value){
         $this->props[$name] = true;
         $this->$name = $value;
-        //var_dump($this->props);
     }
 
 

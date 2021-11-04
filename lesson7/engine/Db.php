@@ -1,7 +1,7 @@
 <?php
 
 namespace app\engine;
-use app\models\Products;
+use app\models\entities\Products;
 use app\traits\TSingleton;
 use \PDO;
 class Db
@@ -80,10 +80,10 @@ class Db
         $STH->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $class); //$class = app\models\Product
         $obj = $STH->fetch();
 
-        if(!$obj){
+        /*if(!$obj){
             throw new \Exception("Объект не найден", 404);
         }
-
+        */
         return $obj;
     }
 

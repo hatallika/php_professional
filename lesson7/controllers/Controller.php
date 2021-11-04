@@ -2,12 +2,14 @@
 
 namespace app\controllers;
 
-use app\engine\Auth;
+
 use app\engine\Message;
 use app\engine\Render;
 use app\engine\Request;
 use app\interfaces\IRenderer;
-use app\models\{Users, Cart};
+use app\models\repositories\CartRepository;
+use app\models\repositories\UserRepository;
+
 
 abstract class Controller
 {
@@ -40,12 +42,12 @@ abstract class Controller
         if($this->useLayout){
 
             return $this->renderTemplate('layouts/'.$this->layout, [
-                'menu' => $this->renderTemplate('menu', ['count' => Cart::getSumColumn('quantity', $session_id)]),
+                'menu' => $this->renderTemplate('menu', ['count' => (new CartRepository())->getSumColumn('quantity', $session_id)]),
                 'content' => $this->renderTemplate($template, $params), //либо index, либо catalog, либо card
                 'auth' => $this->renderTemplate('auth', [
-                    'auth' => Users::isAuth(),
-                    'username'=> Users::get_user(),
-                    'message_auth' =>Message::getMessageAuth()])
+                    'auth' => (new UserRepository())->isAuth(),
+                    'username'=> (new UserRepository())->get_user(),
+                    'message_auth' => Message::getMessageAuth()])
             ]);
         } else {
             return $this->renderTemplate($template, $params);

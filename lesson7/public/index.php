@@ -11,7 +11,7 @@ include "../engine/Autoload.php";
 spl_autoload_register([new Autoload(), 'loadClass']);
 require_once '../vendor/autoload.php';
 
-try {
+//try {
 
     $request = new Request();
 
@@ -29,9 +29,8 @@ try {
         die("404");
     }
 
-} catch (\PDOException $e){
-    var_dump($e->getMessage());
-} catch (\Exception $e){
-    var_dump($e);
-}
-
+//} catch (\PDOException $e){
+//    var_dump($e->getMessage());
+//} catch (\Exception $e){
+//    var_dump($e);
+//}
