@@ -1,17 +1,17 @@
 <?php
 session_start();
 
-use app\engine\{Autoload, Render, TwigRender, Request};
-use app\models\{Products, Users, Feedback, Cart, Images};
+use app\engine\{Render, TwigRender, Request};
+//use app\models\{Products, Users, Feedback, Cart, Images};
 
 
 include "../config/config.php";
-include "../engine/Autoload.php";
+//include "../engine/Autoload.php";
 
-spl_autoload_register([new Autoload(), 'loadClass']);
+//spl_autoload_register([new Autoload(), 'loadClass']);
 require_once '../vendor/autoload.php';
 
-//try {
+try {
 
     $request = new Request();
 
@@ -29,8 +29,8 @@ require_once '../vendor/autoload.php';
         die("404");
     }
 
-//} catch (\PDOException $e){
-//    var_dump($e->getMessage());
-//} catch (\Exception $e){
-//    var_dump($e);
-//}
+} catch (\PDOException $e){
+    var_dump($e->getMessage());
+} catch (\Exception $e){
+    echo $e->getMessage();
+}

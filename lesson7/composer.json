@@ -4,5 +4,10 @@
       "ext-json": "*",
       "ext-pdo": "*",
         "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+      "psr-4": {
+        "app\\": ""
+      }
     }
 }

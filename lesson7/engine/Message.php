@@ -13,4 +13,18 @@ class Message
         }
         return $message;
     }
+
+    static function getMessageException(){
+        $message ="";
+        $session = (new Session());
+
+
+        if (isset($session->get('message')['exception'])) {
+            $message = $session->get('message')['exception'];
+            unset($_SESSION['message']['exception']);
+        }
+        return $message;
+    }
+
+
 }

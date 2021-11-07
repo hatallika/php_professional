@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers;
+use app\engine\Message;
 use app\models\entities\Products;
 use app\models\repositories\ProductRepository;
 
@@ -37,8 +38,11 @@ class ProductController extends Controller
         $id = $this->getGlobalParams()['id'];
         $product = (new ProductRepository())->getOne($id);
 
+
+
         echo $this->render('catalog/card',[
-            'product'=> $product
+            'product'=> $product,
+            'message_ex'=> Message::getMessageException()
         ]);
 
     }

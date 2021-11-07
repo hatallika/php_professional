@@ -75,15 +75,20 @@ class Db
 
     public function queryOneObject($sql, $params, $class)
     {
+        try {
 
-        $STH = $this->query($sql,$params);
-        $STH->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $class); //$class = app\models\Product
-        $obj = $STH->fetch();
+            $STH = $this->query($sql, $params);
+            $STH->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $class); //$class = app\models\Product
+            $obj = $STH->fetch();
 
-        /*if(!$obj){
-            throw new \Exception("Объект не найден", 404);
+            if (!$obj) {
+
+                throw new \Exception("Объект не найден");
+            }
+        } catch (\Exception $e) {
+            (new Session)->set('message', ['exception'=>$e->getMessage()]);
+
         }
-        */
         return $obj;
     }
 
