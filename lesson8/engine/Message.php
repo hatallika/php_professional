@@ -2,6 +2,8 @@
 
 namespace app\engine;
 
+use app\models\repositories\FeedbackRepository;
+
 class Message
 {
     public function getMessageAuth(){
@@ -22,6 +24,19 @@ class Message
         if (isset($session->get('message')['exception'])) {
             $message = $session->get('message')['exception'];
             unset($_SESSION['message']['exception']);
+        }
+        return $message;
+    }
+// универсальные
+    public function setMessage ($name, $value){
+        $_SESSION['message'] = [$name => $value];
+    }
+
+    public function getMessage ($name){
+        $session = App::call()->session;
+        if (isset($session->get('message')[$name])) {
+            $message = $session->get('message')[$name];
+            unset($_SESSION['message'][$name]);
         }
         return $message;
     }

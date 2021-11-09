@@ -1,0 +1,29 @@
+<h2>Мои заказы</h2>
+<div id="orders">
+    {% if message %}
+    {{ message }}
+    {% else %}
+        {% for item in orders %}
+        <a href="order/one/?id={{ item.id }}">Номер заказа: {{ item.id }} </a><br>
+        <b>Получатель:</b> {{ item.name }} <br>
+        <b>Контактные данные:</b> {{ item.phone }}<br>
+        <b>Статус заказа:</b> {{ item.status }}<br>
+    {{ session['message']['message_status' ~  item.id] }}
+    <form action="/admin/change/" method="post">
+        <input type="text" name="order_id" value="{{ item.id }}" hidden>
+        <select name="status">
+            <option value="processing"{% if (item.status == 'processing') %} selected {% endif %}>processing</option>
+            <option value="complete" {% if (item.status == 'complete') %} selected {% endif %}>complete</option>
+            <option value="cancel" {% if (item.status == 'cancel') %} selected {% endif %}>cancel</option>
+            <option value="waiting" {% if (item.status == 'waiting') %} selected {% endif %}>waiting</option>
+        </select>
+        <input type="submit" name="change" value="Изменить">
+    </form>
+    <hr>
+</div>
+
+        {% else %}
+        {{ order_message }}
+        Нет заказов
+        {% endfor %}
+    {% endif %}

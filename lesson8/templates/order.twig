@@ -1,0 +1,25 @@
+{% if order %}
+<h2>Заказ № {{order[0]['order_id']}}</h2>
+<div class="orders_item">
+    <h3>Список товаров:</h3>
+    {% for product in order %}
+        <h3>{{ product.product_name }}</h3>
+        <img src="/images/{{ product.image }}" alt="{{ product.name }}" width="80"><br>
+        Цена: {{ product.fixed_price }}<br>
+        Количество: {{ product.quantity }}
+        <hr>
+    {% endfor %}
+    <h3>Контакты</h3>
+    {{ order_message }}<br>
+    Заказчик: {{order[0]['name']}}<br>
+    Номер телефона: {{order[0]['phone']}}
+    <form action="/order/change/" method="get">
+        <input type="text" name="order_id" value="{{order[0]['order_id']}}" hidden>
+        <input type="text" name="order_name" placeholder="Ваше имя" value="{{order[0]['name']}}">
+        <input type="text" name="phone" placeholder="Ваш номер телефона" value="{{order[0]['phone']}}">
+        <input type="submit" name="order_change" value="Изменить">
+    </form>
+</div>
+{% else %}
+Нет такого заказа
+{% endif %}

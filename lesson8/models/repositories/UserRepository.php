@@ -2,6 +2,7 @@
 
 namespace app\models\repositories;
 
+use app\engine\App;
 use app\engine\Session;
 use app\models\entities\Users;
 use app\models\Repository;
@@ -39,8 +40,8 @@ class UserRepository extends Repository
         $passDB = $this->getOneWhere('login',$login);
         //password_hash('123', PASSWORD_DEFAULT);// поможет получить захешированный пароль для нового пользователя в базе.
         if (password_verify($pass,$passDB->pass)){
-            (new Session())->set('login', $login);
-            (new Session())->set('id', $passDB->id);
+            App::call()->session->set('login', $login);
+            App::call()->session->set('id', $passDB->id);
             //$_SESSION['login'] = $login;
             //$_SESSION['id'] = $passDB->id;
             return true;
@@ -52,10 +53,10 @@ class UserRepository extends Repository
 
         $hash = uniqid(rand(), true);
         $id = (int)$_SESSION['id'];
-        $user = (new UserRepository())->getOne($id);
+        $user = App::call()->userRepository->getOne($id);
         $user->hash = $hash;
         $user->props['hash'] = true;
-        (new UserRepository())->save($user);
+        App::call()->userRepository->save($user);
         //$user->save();
         setcookie("hash", $hash, time() + 36000, '/');
     }
@@ -63,13 +64,13 @@ class UserRepository extends Repository
 
     public function get_user()
     {
-        $session_login = (new Session())->get('login');
+        $session_login = App::call()->session->get('login');
         return $session_login;
     }
 
     public function is_admin()
     {
-        $isAdmin = ((new Session())->get('login')) == 'admin';
+        $isAdmin = (App::call()->session->get('login')) == 'admin';
         return $isAdmin;
         //return $_SESSION['login'] == 'admin';
     }

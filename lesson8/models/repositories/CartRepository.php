@@ -2,6 +2,7 @@
 
 namespace app\models\repositories;
 
+use app\engine\App;
 use app\engine\Db;
 use app\models\entities\Cart;
 use app\models\Repository;
@@ -22,7 +23,7 @@ class CartRepository extends Repository
                         FROM products p JOIN cart c 
                         WHERE c.product_id = p.id AND c.session_id = :session_id";
 
-        return Db::getInstance()->queryAll($sql,['session_id' => $session_id]);
+        return App::call()->db->queryAll($sql,['session_id' => $session_id]);
     }
 
   /*  public function getCartProduct($session_id,$id){
@@ -35,7 +36,7 @@ class CartRepository extends Repository
     public function countCartItems($session_id){
         $tablename = $this->getTableName();
         $sql = "SELECT SUM(quantity) as count FROM $tablename WHERE session_id = :session_id";
-        return Db::getInstance()->queryOne($sql,['session_id' => $session_id])['count'];
+        return App::call()->db->queryOne($sql,['session_id' => $session_id])['count'];
     }
 
     public function getCartProduct($session_id,$id){
@@ -43,6 +44,6 @@ class CartRepository extends Repository
         $tablename = $this->getTableName();
         $sql = "SELECT * FROM {$tablename} WHERE session_id = :session_id AND product_id = :id";
 
-        return Db::getInstance()->queryOneObject($sql, ['session_id' => $session_id, 'id' => $id], $this->getEntityClass());
+        return App::call()->db->queryOneObject($sql, ['session_id' => $session_id, 'id' => $id], $this->getEntityClass());
     }
 }

@@ -19,6 +19,9 @@
     Корзина пуста
 <?php endif; ?>
 
+<button class="addorder">Оформить заказ</button>
+
+
 
 <script>
     let buttons = document.querySelectorAll('.del');

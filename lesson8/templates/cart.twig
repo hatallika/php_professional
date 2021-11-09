@@ -12,9 +12,23 @@
                 <br>
                 <button class="del" data-id="{{ item.cart_id }}">Удалить</button>
         </div>
+
     {% else %}
+    {{  order_message }}
         Нет товаров в корзине
     {% endfor %}
+
+    {% if cart %}
+    <div id="order">
+        <form action="/order/add/" method="post">
+            <h3>Оформить заказ</h3>
+            <input type="text" name="order_name" placeholder="Ваше имя">
+            <input type="text" name="phone" placeholder="Ваш номер телефона">
+            <input type="submit" name="order_ok" value="Заказать">
+        </form>
+    </div>
+    {% endif %}
+
 </div>
 <script>
     let buttons = document.querySelectorAll('.del');

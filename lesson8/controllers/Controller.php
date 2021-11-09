@@ -43,11 +43,13 @@ abstract class Controller
         if($this->useLayout){
 
             return $this->renderTemplate('layouts/'.$this->layout, [
-                'menu' => $this->renderTemplate('menu', ['count' => (new CartRepository())->getSumColumn('quantity', $session_id)]),
+                'menu' => $this->renderTemplate('menu',
+                    ['count' => App::call()->cartRepository->getSumColumn('quantity', $session_id),
+                     'isAdmin' => App::call()->userRepository->is_admin()]),
                 'content' => $this->renderTemplate($template, $params), //либо index, либо catalog, либо card
                 'auth' => $this->renderTemplate('auth', [
-                    'auth' => (new UserRepository())->isAuth(),
-                    'username'=> (new UserRepository())->get_user(),
+                    'auth' => App::call()->userRepository->isAuth(),
+                    'username'=> App::call()->userRepository->get_user(),
                     'message_auth' => App::call()->message->getMessageAuth()])
             ]);
         } else {

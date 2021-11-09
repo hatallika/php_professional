@@ -6,19 +6,21 @@ use app\traits\TSingleton;
 use \PDO;
 class Db
 {
-    use TSingleton;
-    private $config = [
-        'driver' => 'mysql',
-        'host' => 'localhost:3307',
-        'login' => 'test',
-        'password' => '12345',
-        'database' => 'gb2',
-        'charset' => 'utf8'
-    ];
 
-
+    protected $config;
 
     private $connection = null;//PDO
+
+    public function __construct($driver = null, $host = null, $login = null, $password = null, $database = null,
+                $charset = "utf8")
+    {
+        $this->config['driver'] = $driver;
+        $this->config['host'] = $host;
+        $this->config['login'] = $login;
+        $this->config['password'] = $password;
+        $this->config['database'] = $database;
+        $this->config['charset'] = $charset;
+    }
 
     private function getConnection(){
         // $DBH = new PDO("mssql:host=$host;dbname=$dbname", $user, $pass);

@@ -19,7 +19,8 @@ class CartController extends Controller
         $session_id = App::call()->session->getId();
         $cart = App::call()->cartRepository->getCart($session_id);
         echo $this->render('cart',[
-            'cart'=> $cart
+            'cart'=> $cart,
+            'order_message' =>App::call()->message->getMessage('order')
         ]);
     }
 
