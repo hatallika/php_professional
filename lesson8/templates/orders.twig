@@ -1,0 +1,17 @@
+<h2>Мои заказы</h2>
+<div id="orders">
+    {% if message %}
+    {{ message }}
+    {% else %}
+        {% for item in orders %}
+        <a href="order/one/?id={{ item.id }}">Номер заказа: {{ item.id }} </a><br>
+        <b>Получатель:</b> {{ item.name }} <br>
+        <b>Контактные данные:</b> {{ item.phone }}<br>
+        <b>Статус заказа:</b> {{ item.status }}<br>
+        </div>
+
+        {% else %}
+        {{ order_message }}
+        Нет заказов
+        {% endfor %}
+    {% endif %}

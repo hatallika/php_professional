@@ -1,0 +1,7 @@
+<a href="/">Главная</a>
+<a href="/product/catalog">Каталог</a>
+<a href="/cart">Корзина(<span id="count">{{ count ?? 'пустая'}}</span>)</a>
+<a href="/order">Мои заказы</a>
+{% if isAdmin %}
+<a href="/admin">Админка</a>
+{% endif %}
